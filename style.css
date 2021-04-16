@@ -1,0 +1,315 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template: 
+    "aside main" 1fr
+    "footer footer" 80px/
+    1fr 8fr;
+    font-family: sans-serif;
+
+}
+
+a{
+    display: inline-block;
+    text-decoration: none;
+    color: grey;
+}
+
+.margin-section{
+    margin: 20px 0px;
+}
+
+h2{
+    font-size: 2.25rem;
+    margin-bottom: 0.5rem;
+}
+h3{
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.music-section h3, .left-nav h2,h3{
+    color: white;
+    font-size: 1.1rem;
+}
+
+
+li{
+    list-style: none;
+    margin: 10px 0px;
+    
+}
+
+.icon{
+    width: 30px;
+}
+
+.wrapper{
+    padding: 15px;
+}
+
+
+/* Aside section */
+
+aside{
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+    grid-area: aside;
+    background-color: black;
+}
+
+
+.spotify-logo{
+    width: 150px; 
+ }
+
+
+.top-aside a{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    align-items: center;
+
+}
+
+.play-lists a{
+    display: inline-block;
+}
+
+
+.bottom-aside{
+    display: grid;
+    align-items: center;
+}
+.bottom-aside .aside-wrapper{
+    padding-bottom: 2px;
+}
+
+.bottom-aside a{
+    margin-bottom: 10px;
+    border-bottom: 1px solid grey;
+    padding-bottom: 5px;
+
+
+}
+
+/* End aside */
+
+/* Main */
+
+main{
+    display: grid;
+    background-color: rgb(24, 24, 32);
+    grid-template-rows: 80px 1fr;
+}
+
+.main-content h2{
+    color: white;
+    font-size: 1.3rem;
+}
+
+
+/* Header */
+header{
+    background-color: rgba(0, 0, 0, 0.507);
+    padding-right: 25px;
+    position: sticky;
+    top: 0;
+    right: 0;
+}
+
+.upgrade a {
+    color: whitesmoke;
+    border: 1px solid white;
+    border-radius: 20px;
+    padding: 10px 40px;
+    font-size: 0.9rem;
+
+}
+
+.grid-col-2{
+    display: grid;
+    grid-template-columns: 8fr 1fr;
+    align-items: center;
+}
+
+.text-center{
+    text-align: center;
+}
+
+/* header end */
+
+/* Nav */
+
+nav ul{
+    text-align: center;
+}
+nav li{
+    display: inline-block;
+    margin-left: 5px;
+    font-size: 0.8rem;
+    
+}
+
+.active{
+    border-bottom: 1px solid lightgreen;
+    padding-bottom: 5px;
+    width: 35px;
+    margin-left: 15px;
+    
+}
+
+/* Nav end */
+
+
+.main-section img{
+    width: 170px;
+}
+
+
+
+
+.main-section p{
+    font-size: 0.7rem;
+    color: grey;
+}
+  
+.grid-col-170{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 170px);
+    grid-gap: 20px;
+    
+}
+
+.rounded{
+    border-radius: 50%;
+}
+
+/* end Main */
+
+/* Footer start */
+footer{
+    grid-area: footer;
+    position: sticky;
+    bottom: 0;
+    right: 0;
+    background-color: rgb(43, 43, 43);
+}
+
+.grid-col-3{
+    display: grid;
+    grid-template-columns: 1fr  3fr 1fr;
+    align-items: center;
+}
+
+.left-section{
+    display: grid;
+    grid-template-columns: 35px 60px 90px;
+    grid-gap: 10px;
+    align-items: center;
+}
+
+.left-section img{
+    width: 35px;
+}
+
+.text{
+    display: inline-block;
+}
+
+
+
+.left-section h2{
+    font-size: 0.7rem;
+    margin: 0;
+    color: white;
+}
+.left-section p{
+    font-size: 0.6rem;
+    color: grey;
+}
+
+.left-section .icon, .right-section .icon{
+    width: 17px;
+    color: grey;
+    margin-left: 10px;
+}
+
+.grid-row-2{
+    display: grid;
+    grid-template-rows: 35px 20px;
+    place-items: center;
+}
+
+.play-icons{
+    align-items: center;
+}
+
+.play-icons img{
+    width: 25px;
+    display: inline-block;
+    margin-left: 20px;
+    fill: white;
+}
+
+.progress-bar{
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr 300px 1fr;
+    grid-gap: 10px;
+}
+
+.border{
+    border: 1px solid black;
+    width: 100%;
+    border-radius: 5px;
+}
+
+
+
+.line, .right-section .line{
+    height: 5px;
+    animation: music 3s alternate;
+    animation-fill-mode: forwards;
+    width: 0;
+    border-radius: 5px;
+}
+
+@keyframes music {
+    0%{
+        width: 0%;
+        
+    }
+    100%{
+        width: 30%;
+        background-color: green;
+    }
+}
+
+
+.progress-bar p{
+    display: inline-block;
+    color: white;
+    font-size: 0.9rem;
+}
+
+.skip-reverse{
+    transform: rotate(180deg);
+}
+
+.grid-col-4{
+    display: grid;
+    grid-template-columns: repeat(3,auto) 50px;
+    justify-content: center;
+    align-items: center;
+    grid-gap: 5px;
+}
+
+
+
